@@ -13,5 +13,22 @@ UCLASS()
 class MYFIRSTUE_API AMyPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
+
+	UPROPERTY(VisibleAnyWhere)
+	TArray<class ACarPawn*> Pawns;
+
+public :
+	AMyPlayerController();
+
+	virtual void BeginPlay() override;
+private:
+
+	AController* SavedController;
+
+	void Press1();
+	void Press2();
+	void Press3();
+	void Press4();
+	void Press5();
 };
